@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="BDv-hZ-0jb">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="0uJ-a0-s0b" customClass="HomeViewController" customModule="Neo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pqi-Gf-WMy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zhN-iT-rrL">
+                                <rect key="frame" x="0.0" y="64" width="414" height="798"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6bm-VJ-8RW"/>
+                        <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zhN-iT-rrL" firstAttribute="leading" secondItem="6bm-VJ-8RW" secondAttribute="leading" id="CCg-mf-nw8"/>
+                            <constraint firstItem="zhN-iT-rrL" firstAttribute="trailing" secondItem="6bm-VJ-8RW" secondAttribute="trailing" id="g1M-Z7-n2C"/>
+                            <constraint firstItem="zhN-iT-rrL" firstAttribute="bottom" secondItem="6bm-VJ-8RW" secondAttribute="bottom" id="pwe-Rr-oBF"/>
+                            <constraint firstItem="zhN-iT-rrL" firstAttribute="top" secondItem="6bm-VJ-8RW" secondAttribute="top" constant="20" id="uTp-36-M9e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="zhN-iT-rrL" id="1iM-SO-HyF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ft5-Ki-ts6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-380" y="134"/>
+        </scene>
+        <!--Goal Status View Controller-->
+        <scene sceneID="wPD-V8-lV2">
+            <objects>
+                <viewController storyboardIdentifier="GoalStatusViewController" id="FQM-hY-7Ih" customClass="GoalStatusViewController" customModule="Neo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JcF-Q5-tYF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFC-EL-yUl">
+                                <rect key="frame" x="20" y="74" width="8" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvC-EB-Xbq">
+                                <rect key="frame" x="20" y="125" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y7V-Cd-1lw">
+                                <rect key="frame" x="0.0" y="596" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="gFl-jo-QL0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIv-8L-b3T">
+                                <rect key="frame" x="340" y="59.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5UI-4o-SwT"/>
+                                    <constraint firstAttribute="width" constant="50" id="M1w-kX-iUp"/>
+                                </constraints>
+                                <state key="normal" image="wikipedia_icon"/>
+                                <connections>
+                                    <action selector="onWikipediaButtonTapped:" destination="FQM-hY-7Ih" eventType="touchUpInside" id="yTF-D2-TgZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Aoo-pS-T3Z"/>
+                        <color key="backgroundColor" red="0.015686274510000001" green="0.12549019610000001" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Aoo-pS-T3Z" firstAttribute="trailing" secondItem="wIv-8L-b3T" secondAttribute="trailing" constant="24" id="1YE-6L-0Im"/>
+                            <constraint firstItem="wIv-8L-b3T" firstAttribute="centerY" secondItem="PFC-EL-yUl" secondAttribute="centerY" id="7OZ-Bf-vIg"/>
+                            <constraint firstItem="gvC-EB-Xbq" firstAttribute="leading" secondItem="PFC-EL-yUl" secondAttribute="leading" id="Cec-4d-uNk"/>
+                            <constraint firstItem="gvC-EB-Xbq" firstAttribute="top" secondItem="PFC-EL-yUl" secondAttribute="bottom" constant="30" id="G2A-OH-e2e"/>
+                            <constraint firstItem="y7V-Cd-1lw" firstAttribute="trailing" secondItem="Aoo-pS-T3Z" secondAttribute="trailing" id="HiM-Ov-rgp"/>
+                            <constraint firstItem="PFC-EL-yUl" firstAttribute="leading" secondItem="Aoo-pS-T3Z" secondAttribute="leading" constant="20" id="VcT-E9-pck"/>
+                            <constraint firstAttribute="bottom" secondItem="y7V-Cd-1lw" secondAttribute="bottom" id="aS7-uS-KxL"/>
+                            <constraint firstItem="Aoo-pS-T3Z" firstAttribute="trailing" secondItem="gvC-EB-Xbq" secondAttribute="trailing" constant="20" id="o3j-aX-YYO"/>
+                            <constraint firstItem="PFC-EL-yUl" firstAttribute="top" secondItem="Aoo-pS-T3Z" secondAttribute="top" constant="30" id="w7S-0b-6eW"/>
+                            <constraint firstItem="y7V-Cd-1lw" firstAttribute="leading" secondItem="Aoo-pS-T3Z" secondAttribute="leading" id="xmM-Gb-483"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="gvC-EB-Xbq" id="r2A-6q-qB1"/>
+                        <outlet property="rocketImageView" destination="y7V-Cd-1lw" id="2Il-DZ-5KI"/>
+                        <outlet property="titleLabel" destination="PFC-EL-yUl" id="2aF-zH-SZu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Qd-Pw-A10" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wikipedia_icon" width="1058" height="1058"/>
+    </resources>
+</document>
