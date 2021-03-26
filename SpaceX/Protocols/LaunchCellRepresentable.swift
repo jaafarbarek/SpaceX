@@ -8,26 +8,29 @@
 import RxSwift
 import Kingfisher
 
-protocol GitRepositoryPresentable {
+protocol LaunchPresentable {
     
-    var repoNameLabel: UILabel! {set get}
-    var repoDescriptionLabel: UILabel! {set get}
-    var avatarImageView: UIImageView! {set get}
-    var ownerNameLabel: UILabel! {set get}
-    var starCountLabel: UILabel! {set get}
+    var nameLabel: UILabel! {set get}
+    var descriptionLabel: UILabel! {set get}
+    var dateLabel: UILabel! {set get}
+    var numberLabel: UILabel! {set get}
+    var upcomingLabel: UILabel! {set get}
+    var customView: UIView! {set get}
+    var upcomingView: UIView! {set get}
     var disposeBag : DisposeBag {set get}
 }
 
-extension GitRepositoryPresentable {
-    func map(repo: GitRepository?) {
-        guard let repo = repo else {
-            return
+extension LaunchPresentable {
+    func map(viewModel: LaunchCellViewModel) {
+        
+        nameLabel.text = viewModel.displayName
+        descriptionLabel.text = viewModel.detailsText
+        dateLabel.text = viewModel.dateText
+        
+        if let flightNumber = viewModel.flightNumber {
+            numberLabel.text = "#\(flightNumber)"
         }
         
-        repoNameLabel?.text = repo.repoName()
-        repoDescriptionLabel?.text = repo.description
-        avatarImageView?.kf.setImage(with: URL(string: repo.owner.avatarUrl)!)
-        ownerNameLabel?.text = repo.ownerName()
-        starCountLabel?.text = formatCount(repo.stargazersCount)
+        upcomingView.isHidden = !viewModel.isUpcoming
     }
 }

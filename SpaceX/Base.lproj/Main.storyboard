@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Launch List View Controller-->
         <scene sceneID="BDv-hZ-0jb">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="0uJ-a0-s0b" customClass="HomeViewController" customModule="Neo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchListViewController" id="0uJ-a0-s0b" customClass="LaunchListViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pqi-Gf-WMy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="-380" y="134"/>
         </scene>
-        <!--Goal Status View Controller-->
+        <!--Rocket Details View Controller-->
         <scene sceneID="wPD-V8-lV2">
             <objects>
-                <viewController storyboardIdentifier="GoalStatusViewController" id="FQM-hY-7Ih" customClass="GoalStatusViewController" customModule="Neo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RocketDetailsViewController" id="FQM-hY-7Ih" customClass="RocketDetailsViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JcF-Q5-tYF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,8 +83,10 @@
                             <constraint firstItem="gvC-EB-Xbq" firstAttribute="leading" secondItem="PFC-EL-yUl" secondAttribute="leading" id="Cec-4d-uNk"/>
                             <constraint firstItem="gvC-EB-Xbq" firstAttribute="top" secondItem="PFC-EL-yUl" secondAttribute="bottom" constant="30" id="G2A-OH-e2e"/>
                             <constraint firstItem="y7V-Cd-1lw" firstAttribute="trailing" secondItem="Aoo-pS-T3Z" secondAttribute="trailing" id="HiM-Ov-rgp"/>
+                            <constraint firstItem="y7V-Cd-1lw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gvC-EB-Xbq" secondAttribute="bottom" constant="20" id="K7E-P4-N3e"/>
                             <constraint firstItem="PFC-EL-yUl" firstAttribute="leading" secondItem="Aoo-pS-T3Z" secondAttribute="leading" constant="20" id="VcT-E9-pck"/>
                             <constraint firstAttribute="bottom" secondItem="y7V-Cd-1lw" secondAttribute="bottom" id="aS7-uS-KxL"/>
+                            <constraint firstItem="wIv-8L-b3T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PFC-EL-yUl" secondAttribute="trailing" constant="20" id="llS-Im-bSF"/>
                             <constraint firstItem="Aoo-pS-T3Z" firstAttribute="trailing" secondItem="gvC-EB-Xbq" secondAttribute="trailing" constant="20" id="o3j-aX-YYO"/>
                             <constraint firstItem="PFC-EL-yUl" firstAttribute="top" secondItem="Aoo-pS-T3Z" secondAttribute="top" constant="30" id="w7S-0b-6eW"/>
                             <constraint firstItem="y7V-Cd-1lw" firstAttribute="leading" secondItem="Aoo-pS-T3Z" secondAttribute="leading" id="xmM-Gb-483"/>
