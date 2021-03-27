@@ -10,7 +10,8 @@ import UIKit
 // MARK: - HUD Handling Methods
 extension UIViewController {
     func showHUD() {
-        guard let currentWindow = UIApplication.shared.keyWindow else { return }
+        let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
+        guard let currentWindow = keyWindow else { return }
 
         let hasLoaderHUD = currentWindow.subviews.contains { ($0 as? LoaderHUD)?.presentingViewController == self }
         guard !hasLoaderHUD else { return }
@@ -21,7 +22,8 @@ extension UIViewController {
 
     func hideHUD() {
         
-        guard let currentWindow = UIApplication.shared.keyWindow else { return }
+        let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
+        guard let currentWindow = keyWindow else { return }
         let loaderHUD = currentWindow.subviews.filter { view in
             guard let loader = view as? LoaderHUD else { return false }
 
@@ -30,3 +32,4 @@ extension UIViewController {
         loaderHUD.forEach { $0.removeFromSuperview() }
     }
 }
+

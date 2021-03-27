@@ -2,8 +2,6 @@
 
 iOS  application  that presents information about successful SpaceX launches.
 
-![](demo.gif)
-
 [![Swift Version][swift-image]][swift-url]  [![codecov.io](https://coveralls.io/repos/github/saeed3e/Build-status-and-code-coverage-badge/badge.svg?branch=master)](https://github.com/n7down/JacocoCodeCoverageBadge/blob/master/images/badge.png)
 
 # Requirements
@@ -37,7 +35,7 @@ Link to repo: https://github.com/ReactiveX/RxSwift
 
 * To run unit test (CMD+U)
 * The application contains 26 test cases for business logic and tracking events and coordinators.
-* Code Coverage is 48% for business logic
+* Code Coverage is 24%
 
 # Coding Style guidelines
 
@@ -51,3 +49,6 @@ Moreover each developer should pay attention to the code he writes:
 
 [swift-image]:https://img.shields.io/badge/swift-5.0-orange.svg
 [swift-url]: https://swift.org/
+
+
+![](demo.gif)
