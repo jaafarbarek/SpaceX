@@ -23,6 +23,10 @@ class LaunchListViewModel {
         self.dependencies = dependencies
         fetchTrips()
     }
+}
+
+// MARK: Private Helper Methods
+private extension LaunchListViewModel {
     
     // MARK: Initialization subscription for [launch]
     func fetchTrips() {
@@ -34,26 +38,8 @@ class LaunchListViewModel {
                         .getUpcomingTrips()
                         .observeOn(MainScheduler.instance)
                         .subscribe(onNext: { [unowned self] launchSubjectList in
-                            self.launchList = launchSubjectList.filter{ $0.success == true || $0.upcoming == true }
-                            
-                            print(self.launchList.count)
-                            
-                            let pastDate = Calendar.current.date(byAdding: .year, value: -3, to: Date())!
-                            
-                            
-                            self.launchList = self.launchList.filter {
-                                if let tripDate = $0.date?.toDate() {
-                                    
-                                    return pastDate < tripDate
-                                }
-                                
-                                return false
-                            }
-                        
-                            print(self.launchList.count)
-                            
-                            self.launchList.sort { $0.upcoming! && !$1.upcoming! }
-                            
+                            self.launchList = launchSubjectList
+                            self.filterLaunchList()
                             self.launchSubjectList.onNext(self.launchList)
                         })
                         .disposed(by: self.disposeBag)
@@ -62,4 +48,15 @@ class LaunchListViewModel {
             .disposed(by: disposeBag)
     }
     
+    
+    // MARK: Filters lanch trips for only upcming and successful ones in the last 3 years
+    func filterLaunchList() {
+        launchList = launchList
+            .filter{ $0.success == true || $0.upcoming == true }
+            .filter {
+                guard let tripDate = $0.date?.toDate() else { return false }
+                
+                return tripDate.checkIfDateInRange(years: 3)
+            }
+    }
 }

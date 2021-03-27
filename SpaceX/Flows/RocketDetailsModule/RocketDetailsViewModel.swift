@@ -13,7 +13,7 @@ class RocketDetailsViewModel {
     private let dependencies: Dependencies
     let launch: Launch
     
-    private(set) var rocket: Rocket!
+    var rocket: Rocket!
     let disposeBag = DisposeBag()
     let downloadTrigger = PublishSubject<Void>()
     var rocketSubject = PublishSubject<Rocket>()
@@ -25,8 +25,8 @@ class RocketDetailsViewModel {
     }
 }
 
-// MARK: Internal API
-extension RocketDetailsViewModel {
+// MARK: Private API
+private extension RocketDetailsViewModel {
     func fetchRocket() {
         
         downloadTrigger
@@ -46,7 +46,10 @@ extension RocketDetailsViewModel {
             .disposed(by: disposeBag)
         
     }
-    
+}
+
+// MARK: Internal API
+extension RocketDetailsViewModel {
     var tripName: String {
         return launch.name ?? ""
     }

@@ -1,9 +1,8 @@
 //
 //  UIViewController+Extensions.swift
-//  Neo
+//  SpaceX
 //
-//  Created by Jaafar Barek on 25/03/2021.
-//  Copyright © 2021 Neo. All rights reserved.
+//  Created by Jaafar Barek on 26/03/2021.
 //
 
 import UIKit

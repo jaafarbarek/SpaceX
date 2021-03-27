@@ -1,9 +1,8 @@
 //
 //  UILabel+Extensions.swift
-//  Matic
+//  SpaceX
 //
-//  Created by Konrad Kierys on 29/03/2019.
-//  Copyright © 2019 Software Brothers. All rights reserved.
+//  Created by Jaafar Barek on 26/03/2021.
 //
 
 import UIKit
